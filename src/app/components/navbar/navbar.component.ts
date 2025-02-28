@@ -8,8 +8,16 @@ import { LanguageService } from '../../services/language.service';
 })
 export class NavbarComponent {
   currentLanguage: 'en' | 'hr' = 'en';
-
+  isMenuOpen = false;
   constructor(private languageService: LanguageService) {}
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'en' ? 'hr' : 'en';
