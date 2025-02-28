@@ -1,0 +1,34 @@
+.tech-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-slider {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Pause animation on hover */
+.tech-slider-container:hover .tech-slider {
+  animation-play-state: paused;
+}

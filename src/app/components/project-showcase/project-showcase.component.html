@@ -1,0 +1,135 @@
+<section class="bg-black text-white py-16 px-8 font-sans">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-5xl font-bold mb-12">My projects</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        *ngFor="let project of paginatedProjects; let i = index"
+        class="project-card rounded-lg overflow-hidden bg-gray-900 transition-all duration-300 hover:transform hover:scale-105"
+        (mouseenter)="setHoveredProject(i)"
+        (mouseleave)="setHoveredProject(null)"
+      >
+        <div class="project-image relative h-48 bg-gray-800">
+          <img
+            [src]="project.imageUrl || '/assets/images/placeholder.jpg'"
+            [alt]="project.title"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-70"
+          ></div>
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2">{{ project.title }}</h3>
+
+          <!-- Tech badges within project-showcase -->
+          <div class="flex flex-wrap gap-2 my-4">
+            <span *ngFor="let tech of project.technologies" class="tech-badge">
+              <i [class]="getIcon(tech) + ' mr-1'"></i>
+              {{ tech }}
+            </span>
+          </div>
+
+          <p class="text-gray-300 mb-4">{{ project.description }}</p>
+
+          <div
+            [ngClass]="
+              hoveredProject === i
+                ? 'opacity-100 visible'
+                : 'opacity-0 invisible'
+            "
+            class="learn-more-btn transition-all duration-300"
+          >
+            <a
+              [href]="project.link"
+              class="inline-flex items-center px-4 py-2 rounded bg-blue-600 text-white font-medium"
+            >
+              Learn more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination controls -->
+    <div class="flex justify-center mt-10" *ngIf="totalPages > 1">
+      <nav class="flex items-center space-x-2">
+        <button
+          (click)="previousPage()"
+          [disabled]="currentPage === 1"
+          [ngClass]="currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''"
+          class="px-3 py-2 rounded bg-gray-800 text-white hover:bg-gray-700 transition-colors duration-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <div class="flex space-x-1">
+          <button
+            *ngFor="let page of [].constructor(totalPages); let i = index"
+            (click)="changePage(i + 1)"
+            [ngClass]="
+              currentPage === i + 1
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-800 text-white hover:bg-gray-700'
+            "
+            class="w-10 h-10 rounded flex items-center justify-center transition-colors duration-200"
+          >
+            {{ i + 1 }}
+          </button>
+        </div>
+
+        <button
+          (click)="nextPage()"
+          [disabled]="currentPage === totalPages"
+          [ngClass]="
+            currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''
+          "
+          class="px-3 py-2 rounded bg-gray-800 text-white hover:bg-gray-700 transition-colors duration-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </div>
+</section>
