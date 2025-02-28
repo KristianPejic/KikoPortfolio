@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.typing-loader {
+  font-family: monospace;
+  font-size: 24px;
+  position: relative;
+}
+
+.typing-loader::after {
+  content: "|";
+  position: absolute;
+  right: -8px;
+  color: #0891b2;
+  animation: blink 0.7s infinite;
+}
+
+.typed-text {
+  display: inline-block;
+}
+
+.typed-text {
+  color: white;
+}
+
+.typed-text ::ng-deep span.tag {
+  color: #0891b2;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.site-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content-loaded {
+  opacity: 1;
+}
