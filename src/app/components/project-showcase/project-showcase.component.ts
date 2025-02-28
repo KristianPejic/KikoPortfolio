@@ -18,7 +18,6 @@ export class ProjectShowcaseComponent implements OnInit {
   currentPage = 1;
   projectsPerPage = 3;
 
-  // Map technology names to their icons (only used in this component)
   techIcons: Record<string, string> = {
     Angular: 'fab fa-angular',
     React: 'fab fa-react',
@@ -97,7 +96,6 @@ export class ProjectShowcaseComponent implements OnInit {
     return this.techIcons[tech] || 'fas fa-code';
   }
 
-  // Pagination methods
   get totalPages(): number {
     return Math.ceil(this.projects.length / this.projectsPerPage);
   }

@@ -23,7 +23,6 @@
         <div class="p-6">
           <h3 class="text-2xl font-bold mb-2">{{ project.title }}</h3>
 
-          <!-- Tech badges within project-showcase -->
           <div class="flex flex-wrap gap-2 my-4">
             <span *ngFor="let tech of project.technologies" class="tech-badge">
               <i [class]="getIcon(tech) + ' mr-1'"></i>
@@ -43,7 +42,7 @@
           >
             <a
               [href]="project.link"
-              class="inline-flex items-center px-4 py-2 rounded bg-blue-600 text-white font-medium"
+              class="inline-flex items-center px-4 py-2 rounded bg-cyan-600 text-white font-medium"
             >
               Learn more
               <svg
@@ -66,7 +65,6 @@
       </div>
     </div>
 
-    <!-- Pagination controls -->
     <div class="flex justify-center mt-10" *ngIf="totalPages > 1">
       <nav class="flex items-center space-x-2">
         <button
@@ -97,7 +95,7 @@
             (click)="changePage(i + 1)"
             [ngClass]="
               currentPage === i + 1
-                ? 'bg-blue-600 text-white'
+                ? 'bg-cyan-600 text-white'
                 : 'bg-gray-800 text-white hover:bg-gray-700'
             "
             class="w-10 h-10 rounded flex items-center justify-center transition-colors duration-200"

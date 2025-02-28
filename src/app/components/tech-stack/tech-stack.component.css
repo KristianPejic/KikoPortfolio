@@ -2,6 +2,21 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  /* Add gradient shadows on both sides */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 .tech-slider {
@@ -26,9 +41,18 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-/* Pause animation on hover */
 .tech-slider-container:hover .tech-slider {
   animation-play-state: paused;
+}
+
+.tech-item:hover .tech-icon {
+  background-color: #0891b2;
+  transform: scale(1.1);
+}
+
+.tech-item:hover span {
+  color: #0891b2;
 }

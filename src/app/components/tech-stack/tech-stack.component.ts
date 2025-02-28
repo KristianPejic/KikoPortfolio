@@ -30,13 +30,9 @@ export class TechStackComponent implements OnInit, AfterViewInit {
     { name: 'React', icon: 'fab fa-react' },
   ];
 
-  ngOnInit() {
-    // No need to manually duplicate the array, we handle it in the template
-  }
+  ngOnInit() {}
 
-  // Implementing ngAfterViewInit method from AfterViewInit interface
   ngAfterViewInit(): void {
-    // Your logic here (e.g., accessing DOM elements after view initialization)
     console.log('View has been initialized');
   }
 }

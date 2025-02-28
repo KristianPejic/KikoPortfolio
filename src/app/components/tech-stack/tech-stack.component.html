@@ -5,7 +5,9 @@
     <div class="tech-slider-container">
       <div class="tech-slider">
         <ng-container *ngFor="let tech of technologies">
-          <div class="tech-item flex flex-col items-center mx-6 min-w-max">
+          <div
+            class="tech-item flex flex-col items-center mx-6 min-w-max cursor-pointer"
+          >
             <div class="tech-icon bg-gray-800 rounded-full p-4 mb-2">
               <i [class]="tech.icon + ' text-2xl'"></i>
             </div>
@@ -14,7 +16,9 @@
         </ng-container>
 
         <ng-container *ngFor="let tech of technologies">
-          <div class="tech-item flex flex-col items-center mx-6 min-w-max">
+          <div
+            class="tech-item flex flex-col items-center mx-6 min-w-max cursor-pointer"
+          >
             <div class="tech-icon bg-gray-800 rounded-full p-4 mb-2">
               <i [class]="tech.icon + ' text-2xl'"></i>
             </div>

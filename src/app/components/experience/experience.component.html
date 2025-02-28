@@ -1,15 +1,12 @@
-<!-- experience.component.html -->
 <section class="bg-black text-white py-16 px-8 font-montserrat">
   <div class="max-w-4xl mx-auto">
     <h2 class="text-3xl font-bold mb-16 text-center">Experience</h2>
 
     <div class="timeline relative">
-      <!-- Vertical line -->
       <div
         class="timeline-line absolute left-0 top-0 bottom-0 w-0.5 bg-gray-700 ml-4"
       ></div>
 
-      <!-- Experience items -->
       <div
         *ngFor="let exp of experiences"
         class="timeline-item relative pl-16 mb-16"
@@ -21,7 +18,6 @@
           <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
         </div>
 
-        <!-- Company name with link if available -->
         <div *ngIf="exp.companyUrl" class="text-xl mb-1">
           <a
             [href]="exp.companyUrl"
@@ -38,16 +34,12 @@
           {{ exp.company }}
         </div>
 
-        <!-- Position -->
         <div class="font-bold text-xl mb-1">{{ exp.position }}</div>
 
-        <!-- Period -->
         <div class="text-gray-400 text-sm mb-3">{{ exp.period }}</div>
 
-        <!-- Description -->
         <p class="text-gray-300">{{ exp.description }}</p>
 
-        <!-- GitHub link for OpenSource -->
         <a
           *ngIf="exp.company === 'OpenSource'"
           href="https://github.com/your-username"

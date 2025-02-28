@@ -17,21 +17,21 @@ interface Experience {
 export class ExperienceComponent {
   experiences: Experience[] = [
     {
-      company: 'QPlay.cz',
-      companyUrl: 'https://qplay.cz',
-      position: 'Full-Stack Web Developer',
-      period: 'October, 2023 - March, 2024',
+      company: 'Global-Soft',
+      companyUrl: 'https://www.globalsoft.co/',
+      position: 'Back-end Web Developer',
+      period: 'March, 2023 - June, 2023',
       description:
-        'Adding features to an already built page. Minor website modifications. The project was ended in March 2024.',
+        'Working on a full-stack application using Node.js. The project was a To-Do list.',
       color: '#36b5c9',
     },
     {
-      company: 'Pixelnite',
-      companyUrl: 'https://pixelnite.example',
+      company: 'Ericsson',
+      companyUrl: 'https://ericssonnikolatesla.com/',
       position: 'Full-Stack Web Developer',
-      period: 'July, 2024',
+      period: 'November, 2024 - January 2025',
       description:
-        'Website for minecraft server called Pixelnite. It contains the current number of players on a server, news, admin team and other informations.',
+        'Trello board like website , using Angular , Java Spring Boot , PostgreSQL. Implementing Login/Register , CRUD operations on boards and tasks, Drag n drop feature.',
       color: '#36b5c9',
     },
     {

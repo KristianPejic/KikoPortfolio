@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-// Define valid language types ('en' | 'hr')
 type Language = 'en' | 'hr';
 
-// Define valid translation keys
 type TranslationKey =
   | 'about'
   | 'myWork'
