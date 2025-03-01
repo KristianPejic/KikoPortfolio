@@ -46,9 +46,9 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Berik Barbershop',
       description:
         'Modern barbershop website that includes login/register,reservations,administration,shop purchases,blog system,cart system and much more',
-      imageUrl: '/assets/images/projects/project1.jpg',
+      imageUrl: 'BarberShop.png',
       technologies: ['Laravel', 'Tailwind', 'MySQL'],
-      link: '/projects/project-1',
+      link: 'https://github.com/tioberik/beriks-barbershop',
     },
     {
       title: 'Blog App',
@@ -56,7 +56,7 @@ export class ProjectShowcaseComponent implements OnInit {
         'Blog appliciation with login/register,hashtags creation,post creation,like system etc.',
       imageUrl: '/assets/images/projects/project2.jpg',
       technologies: ['React', 'Java', 'MySQL'],
-      link: '/projects/project-2',
+      link: 'https://github.com/KristianPejic/BlogApp',
     },
     {
       title: 'Super Cars Website',

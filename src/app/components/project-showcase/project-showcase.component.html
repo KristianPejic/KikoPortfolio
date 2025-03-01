@@ -1,15 +1,15 @@
-<section class="bg-black text-white py-16 px-8 font-sans">
+<section id="my-work" class="bg-black text-white py-16 px-8 font-sans">
   <div class="max-w-6xl mx-auto">
     <h1 class="text-5xl font-bold mb-12">My projects</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
         *ngFor="let project of paginatedProjects; let i = index"
-        class="project-card rounded-lg overflow-hidden bg-gray-900 transition-all duration-300 hover:transform hover:scale-105"
+        class="project-card rounded-lg overflow-hidden transition-all duration-300"
         (mouseenter)="setHoveredProject(i)"
         (mouseleave)="setHoveredProject(null)"
       >
-        <div class="project-image relative h-48 bg-gray-800">
+        <div class="project-image h-48">
           <img
             [src]="project.imageUrl || '/assets/images/placeholder.jpg'"
             [alt]="project.title"
@@ -20,7 +20,7 @@
           ></div>
         </div>
 
-        <div class="p-6">
+        <div class="project-content">
           <h3 class="text-2xl font-bold mb-2">{{ project.title }}</h3>
 
           <div class="flex flex-wrap gap-2 my-4">
@@ -42,7 +42,7 @@
           >
             <a
               [href]="project.link"
-              class="inline-flex items-center px-4 py-2 rounded bg-cyan-600 text-white font-medium"
+              class="inline-flex items-center px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white font-medium"
             >
               Learn more
               <svg
@@ -95,7 +95,7 @@
             (click)="changePage(i + 1)"
             [ngClass]="
               currentPage === i + 1
-                ? 'bg-cyan-600 text-white'
+                ? 'bg-blue-600 text-white'
                 : 'bg-gray-800 text-white hover:bg-gray-700'
             "
             class="w-10 h-10 rounded flex items-center justify-center transition-colors duration-200"
