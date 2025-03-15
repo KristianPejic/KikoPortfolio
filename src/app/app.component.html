@@ -1,7 +1,13 @@
 <div class="loader-wrapper" *ngIf="loading">
   <div class="loader-content">
     <div class="typing-loader">
-      <span class="typed-text">{{ displayText }}</span>
+      <span class="typed-code" *ngIf="!showFinalText">{{ displayText }}</span>
+
+      <span
+        class="color-cyan-650 font-bold text-2xl final-text"
+        *ngIf="showFinalText"
+        >{{ finalText }}</span
+      >
     </div>
   </div>
 </div>

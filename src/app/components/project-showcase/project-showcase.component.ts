@@ -45,7 +45,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Berik Barbershop',
       description:
-        'Modern barbershop website that includes login/register,reservations,administration,shop purchases,blog system,cart system and much more',
+        'Modern barbershop website that includes login/register,reservations,administration,shop purchases,blog system,cart system and much more.',
       imageUrl: 'BarberShop.png',
       technologies: ['Laravel', 'Tailwind', 'MySQL'],
       link: 'https://github.com/tioberik/beriks-barbershop',
@@ -55,32 +55,38 @@ export class ProjectShowcaseComponent implements OnInit {
       description:
         'Blog appliciation with login/register,hashtags creation,post creation,like system etc.',
       imageUrl: '/assets/images/projects/project2.jpg',
-      technologies: ['React', 'Java', 'MySQL'],
+      technologies: ['React', 'Spring Boot', 'MySQL'],
       link: 'https://github.com/KristianPejic/BlogApp',
     },
     {
-      title: 'Super Cars Website',
+      title: 'Global-Soft To-do list',
       description:
-        'Description for your third project. Talk about the technologies used and what problems it solves.',
+        'To-do list,fullstack app , made while at practic work at Global-Soft.',
       imageUrl: '/assets/images/projects/project3.jpg',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: '/projects/project-3',
+      technologies: ['Node.js', 'React', 'MySQL'],
+      link: 'https://github.com/KristianPejic/Global-Soft-To-Do-List',
+    },
+    {
+      title: 'Trello board replica',
+      description:
+        'Trello board replica,fullstack app , made while at practic work at Global-Soft.',
+      imageUrl: '/assets/images/projects/project3.jpg',
+      technologies: ['Spring Boot', 'Angular', 'MySQL'],
+      link: 'https://github.com/KristianPejic/TrelloBoard',
+    },
+    {
+      title: 'Pokedle',
+      description: 'Fun,interacting pokemon guessing game.',
+      imageUrl: '/assets/images/projects/project3.jpg',
+      technologies: ['Angular'],
+      link: 'https://github.com/KristianPejic/Pokedle',
     },
     {
       title: 'Super Cars Website',
-      description:
-        'Description for your third project. Talk about the technologies used and what problems it solves.',
+      description: 'Engaging site about super cars!',
       imageUrl: '/assets/images/projects/project3.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: '/projects/project-3',
-    },
-    {
-      title: 'Super Cars Website',
-      description:
-        'Description for your third project. Talk about the technologies used and what problems it solves.',
-      imageUrl: '/assets/images/projects/project3.jpg',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: '/projects/project-3',
+      link: 'https://github.com/KristianPejic/SuperCars',
     },
   ];
 

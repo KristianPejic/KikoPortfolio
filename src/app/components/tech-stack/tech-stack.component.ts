@@ -25,7 +25,7 @@ export class TechStackComponent implements OnInit, AfterViewInit {
     { name: 'TypeScript', icon: 'fab fa-js' },
     { name: 'PostgreSQL', icon: 'fas fa-database' },
     { name: 'Java', icon: 'fab fa-java' },
-    { name: 'Spring Boot', icon: 'fas fa-cogs' },
+    { name: 'Spring Boot', icon: 'fas fa-leaf' },
     { name: 'MySQL', icon: 'fas fa-database' },
     { name: 'React', icon: 'fab fa-react' },
   ];
