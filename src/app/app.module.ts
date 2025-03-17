@@ -10,7 +10,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjectShowcaseComponent } from './components/project-showcase/project-showcase.component';
 import { BlogPostsComponent } from './components/blog-posts/blog-posts.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CertificatesComponent } from './certificates/certificates.component';
+import { CertificatesComponent } from './components/certificates/certificates.component';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CertificatesComponent } from './certificates/certificates.component';
     BlogPostsComponent,
     FooterComponent,
     CertificatesComponent,
+    EducationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
