@@ -17,6 +17,8 @@ export class ProjectShowcaseComponent implements OnInit {
   hoveredProject: number | null = null;
   currentPage = 1;
   projectsPerPage = 3;
+  selectedProject: Project | null = null;
+  showModal = false;
 
   techIcons: Record<string, string> = {
     Angular: 'fab fa-angular',
@@ -62,14 +64,14 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Global-Soft To-do list',
       description:
         'To-do list,fullstack app , made while at practic work at Global-Soft.',
-      imageUrl: '/assets/images/projects/project3.jpg',
+      imageUrl: 'GlobalSoft.png',
       technologies: ['Node.js', 'React', 'MySQL'],
       link: 'https://github.com/KristianPejic/Global-Soft-To-Do-List',
     },
     {
       title: 'Trello board replica',
       description:
-        'Trello board replica,fullstack app , made while at practic work at Global-Soft.',
+        'Trello board replica,fullstack app , made while at practic work at Ericsson.',
       imageUrl: '/assets/images/projects/project3.jpg',
       technologies: ['Spring Boot', 'Angular', 'MySQL'],
       link: 'https://github.com/KristianPejic/TrelloBoard',
@@ -77,14 +79,14 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Pokedle',
       description: 'Fun,interacting pokemon guessing game.',
-      imageUrl: '/assets/images/projects/project3.jpg',
+      imageUrl: 'Pokedle.png',
       technologies: ['Angular'],
       link: 'https://github.com/KristianPejic/Pokedle',
     },
     {
       title: 'Super Cars Website',
       description: 'Engaging site about super cars!',
-      imageUrl: '/assets/images/projects/project3.jpg',
+      imageUrl: 'SuperCars.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/KristianPejic/SuperCars',
     },
@@ -123,5 +125,17 @@ export class ProjectShowcaseComponent implements OnInit {
 
   nextPage(): void {
     this.changePage(this.currentPage + 1);
+  }
+
+  openProjectModal(project: Project): void {
+    this.selectedProject = project;
+    this.showModal = true;
+    document.body.classList.add('overflow-hidden'); // Prevent scrolling when modal is open
+  }
+
+  closeModal(): void {
+    this.showModal = false;
+    this.selectedProject = null;
+    document.body.classList.remove('overflow-hidden');
   }
 }

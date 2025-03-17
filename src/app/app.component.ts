@@ -1,4 +1,3 @@
-// app.component.ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -22,12 +21,10 @@ export class AppComponent implements OnInit {
 
   typeText() {
     if (this.currentIndex < this.fullText.length) {
-      // Add character to display text (showing the code being typed)
       this.displayText += this.fullText.charAt(this.currentIndex);
       this.currentIndex++;
       setTimeout(() => this.typeText(), this.typingSpeed);
     } else {
-      // When typing is complete, wait a moment then transform
       setTimeout(() => {
         this.transformText();
       }, 500);
