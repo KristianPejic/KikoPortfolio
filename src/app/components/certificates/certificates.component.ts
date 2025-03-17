@@ -20,6 +20,12 @@ export class CertificatesComponent {
       title: 'Napredna informatika - Programiranje 2 (C++)',
     },
     {
+      date: '06.03.2023. - 24.04.2023.',
+      institution: 'Kulturni Centar Kralj Fahd',
+      location: 'Mala Tepa, Mostar, BiH',
+      title: 'Napredna informatika - Programiranje 3 (C++)',
+    },
+    {
       date: '01.11.2022. - 17.12.2022.',
       institution: 'Kulturni Centar Kralj Fahd',
       location: 'Mala Tepa, Mostar, BiH',
