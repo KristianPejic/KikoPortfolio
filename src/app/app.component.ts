@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   finalText = '';
   showFinalText = false;
   private fullText =
-    '<span class="color-cyan-650 font-bold text-2xl">Welcome</span>';
+    '<span class="color-cyan-650 font-bold text-3xl">Welcome</span>';
   private typingSpeed = 20;
   private currentIndex = 0;
 

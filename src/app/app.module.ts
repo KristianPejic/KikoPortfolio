@@ -10,6 +10,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjectShowcaseComponent } from './components/project-showcase/project-showcase.component';
 import { BlogPostsComponent } from './components/blog-posts/blog-posts.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CertificatesComponent } from './certificates/certificates.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectShowcaseComponent,
     BlogPostsComponent,
     FooterComponent,
+    CertificatesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -22,7 +22,7 @@
 }
 
 .typing-loader::after {
-  content: "|";
+  content: "";
   position: absolute;
   right: -8px;
   color: #0891b2;
@@ -38,6 +38,7 @@
 .final-text {
   display: inline-block;
   animation: fadeIn 0.5s ease-in;
+  font-size: 64px;
 }
 
 /* Color classes */
