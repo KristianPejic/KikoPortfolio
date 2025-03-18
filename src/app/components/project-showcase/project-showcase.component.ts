@@ -52,6 +52,7 @@ export class ProjectShowcaseComponent implements OnInit {
       imageUrl: 'BarberShop.png',
       technologies: ['Laravel', 'Tailwind', 'MySQL'],
       link: 'https://github.com/tioberik/beriks-barbershop',
+      liveLink: 'http://pzi132024.studenti.sum.ba/',
     },
     {
       title: 'Blog App',
