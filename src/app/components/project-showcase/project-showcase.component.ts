@@ -55,12 +55,11 @@ export class ProjectShowcaseComponent implements OnInit {
       liveLink: 'http://pzi132024.studenti.sum.ba/',
     },
     {
-      title: 'Blog App',
-      description:
-        'Blog appliciation with login/register,hashtags creation,post creation,like system etc.',
-      imageUrl: '/assets/images/projects/project2.jpg',
-      technologies: ['React', 'Spring Boot', 'MySQL'],
-      link: 'https://github.com/KristianPejic/BlogApp',
+      title: 'Job Application',
+      description: 'backend made for job applications',
+      imageUrl: 'JobApp.png',
+      technologies: ['Spring Boot', 'MySQL'],
+      link: 'https://github.com/KristianPejic/JobApplication',
     },
     {
       title: 'Global-Soft To-do list',
@@ -69,6 +68,14 @@ export class ProjectShowcaseComponent implements OnInit {
       imageUrl: 'GlobalSoft.png',
       technologies: ['Node.js', 'React', 'MySQL'],
       link: 'https://github.com/KristianPejic/Global-Soft-To-Do-List',
+    },
+    {
+      title: 'Blog App',
+      description:
+        'Blog appliciation with login/register,hashtags creation,post creation,like system etc.',
+      imageUrl: '/assets/images/projects/project2.jpg',
+      technologies: ['React', 'Spring Boot', 'MySQL'],
+      link: 'https://github.com/KristianPejic/BlogApp',
     },
     {
       title: 'Netflix Replica',
@@ -88,7 +95,8 @@ export class ProjectShowcaseComponent implements OnInit {
     },
     {
       title: 'Pokedle',
-      description: 'Fun,interacting pokemon guessing game.',
+      description:
+        'Fun,interacting pokemon guessing game.Made for sole purpose of learning angular',
       imageUrl: 'Pokedle.png',
       technologies: ['Angular'],
       link: 'https://github.com/KristianPejic/Pokedle',
@@ -110,14 +118,14 @@ export class ProjectShowcaseComponent implements OnInit {
     },
     {
       title: 'Super Cars Website',
-      description: 'Engaging site about super cars using HTML/CSS/JS!',
+      description: 'Freelance made application for someone.',
       imageUrl: 'SuperCars.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/KristianPejic/SuperCars',
     },
     {
       title: 'BMW',
-      description: 'Engaging site about BMW HTML/CSS/JS!',
+      description: 'Freelance made application for someone.',
       imageUrl: 'BMW.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/KristianPejic/SuperCars',
