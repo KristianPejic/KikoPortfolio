@@ -96,14 +96,14 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Python Database Project',
       description: 'Project using Python to manipulate data in PostgreSQL',
-      imageUrl: 'BMW.png',
+      imageUrl: 'python.png',
       technologies: ['Python', 'PostgreSQL'],
       link: 'https://github.com/KristianPejic/PythonDatabase',
     },
     {
       title: 'Crypto Analytics',
       description: 'Site made purely for the purpose of learning react.js',
-      imageUrl: 'SuperCars.png',
+      imageUrl: '',
       technologies: ['React'],
       link: 'https://github.com/KristianPejic/CryptoAnalytics',
     },
