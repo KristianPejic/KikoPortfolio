@@ -8,40 +8,40 @@ import { Component } from '@angular/core';
 export class CertificatesComponent {
   certificates = [
     {
-      date: '01.11.2021. - 27.12.2021.',
-      institution: 'Kulturni Centar Kralj Fahd',
+      date: '01.11.2021 - 27.12.2021',
+      institution: 'Cultural Center King Fahd',
       location: 'Mala Tepa, Mostar, BiH',
-      title: 'Napredna informatika - Programiranje 1 (C++)',
+      title: 'Advanced Computer Science - Programming 1 (C++)',
     },
     {
-      date: '07.03.2022. - 28.04.2022.',
-      institution: 'Kulturni Centar Kralj Fahd',
+      date: '07.03.2022 - 28.04.2022',
+      institution: 'Cultural Center King Fahd',
       location: 'Mala Tepa, Mostar, BiH',
-      title: 'Napredna informatika - Programiranje 2 (C++)',
+      title: 'Advanced Computer Science - Programming 2 (C++)',
     },
     {
-      date: '06.03.2023. - 24.04.2023.',
-      institution: 'Kulturni Centar Kralj Fahd',
+      date: '06.03.2023 - 24.04.2023',
+      institution: 'Cultural Center King Fahd',
       location: 'Mala Tepa, Mostar, BiH',
-      title: 'Napredna informatika - Programiranje 3 (C++)',
+      title: 'Advanced Computer Science - Programming 3 (C++)',
     },
     {
-      date: '01.11.2022. - 17.12.2022.',
-      institution: 'Kulturni Centar Kralj Fahd',
+      date: '01.11.2022 - 17.12.2022',
+      institution: 'Cultural Center King Fahd',
       location: 'Mala Tepa, Mostar, BiH',
-      title: 'Napredna informatika - Web Dizajn(HTML & CSS)',
+      title: 'Advanced Computer Science - Web Design (HTML & CSS)',
     },
     {
-      date: '06.03.2022.-24.04.2022.',
-      institution: 'Kulturni Centar Kralj Fahd',
+      date: '06.03.2022 - 24.04.2022',
+      institution: 'Cultural Center King Fahd',
       location: 'Mala Tepa, Mostar, BiH',
-      title: 'Napredna informatika - Baze Podataka 1 (Access)',
+      title: 'Advanced Computer Science - Databases 1 (Access)',
     },
     {
-      date: '13.11.2022. - 04.03.2023.',
-      institution: 'Kulturni Centar Kralj Fahd',
+      date: '13.11.2022 - 04.03.2023',
+      institution: 'Cultural Center King Fahd',
       location: 'Mala Tepa, Mostar, BiH',
-      title: 'Napredna informatika - Baze Podataka 2 (SQL)',
+      title: 'Advanced Computer Science - Databases 2 (SQL)',
     },
   ];
 }

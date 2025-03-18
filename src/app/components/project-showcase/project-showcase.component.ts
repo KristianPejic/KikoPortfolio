@@ -69,6 +69,14 @@ export class ProjectShowcaseComponent implements OnInit {
       link: 'https://github.com/KristianPejic/Global-Soft-To-Do-List',
     },
     {
+      title: 'Netflix Replica',
+      description:
+        'Angular/Spring Boot/MySQL site with login/register,jwt security,CRUD operation, auth , forgot password system etc...',
+      imageUrl: 'NetflixReplica.png',
+      technologies: ['Angular', 'Spring Boot', 'MySQL'],
+      link: 'https://github.com/KristianPejic/NetflixReplica',
+    },
+    {
       title: 'Trello board replica',
       description:
         'Trello board replica,fullstack app , made while at practic work at Ericsson.',
@@ -85,8 +93,15 @@ export class ProjectShowcaseComponent implements OnInit {
     },
     {
       title: 'Super Cars Website',
-      description: 'Engaging site about super cars!',
+      description: 'Engaging site about super cars using HTML/CSS/JS!',
       imageUrl: 'SuperCars.png',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://github.com/KristianPejic/SuperCars',
+    },
+    {
+      title: 'BMW',
+      description: 'Engaging site about BMW HTML/CSS/JS!',
+      imageUrl: 'BMW.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/KristianPejic/SuperCars',
     },

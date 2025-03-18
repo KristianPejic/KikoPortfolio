@@ -7,14 +7,14 @@ import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 export class EducationComponent {
   educationItems = [
     {
-      institution: 'Sveučilišni prvostupnik informatike',
+      institution: 'Bachelor of Computer Science',
       place:
-        'Fakultet prirodoslovno-matematičkih i obrazovanih znanosti, Sveučilište u Mostaru',
+        'Faculty of Natural Sciences, Mathematics, and Educational Sciences, University of Mostar',
       period: '2021 - 2024',
     },
     {
-      institution: 'Gimnazija, Srednja škola Antuna Branka Šimića',
-      place: 'Dr. Franje Tuđmana 14, Grude(BiH)',
+      institution: 'Gymnasium, Secondary School Antun Branko Šimić',
+      place: 'Dr. Franje Tuđmana 14, Grude (BiH)',
       period: '2017 - 2021',
     },
   ];
