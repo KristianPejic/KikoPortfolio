@@ -6,6 +6,7 @@ interface Project {
   imageUrl: string;
   technologies: string[];
   link: string;
+  liveLink?: string;
 }
 
 @Component({
@@ -90,6 +91,21 @@ export class ProjectShowcaseComponent implements OnInit {
       imageUrl: 'Pokedle.png',
       technologies: ['Angular'],
       link: 'https://github.com/KristianPejic/Pokedle',
+      liveLink: 'https://pokedle-kappa.vercel.app/',
+    },
+    {
+      title: 'Python Database Project',
+      description: 'Project using Python to manipulate data in PostgreSQL',
+      imageUrl: 'BMW.png',
+      technologies: ['Python', 'PostgreSQL'],
+      link: 'https://github.com/KristianPejic/PythonDatabase',
+    },
+    {
+      title: 'Crypto Analytics',
+      description: 'Site made purely for the purpose of learning react.js',
+      imageUrl: 'SuperCars.png',
+      technologies: ['React'],
+      link: 'https://github.com/KristianPejic/CryptoAnalytics',
     },
     {
       title: 'Super Cars Website',
