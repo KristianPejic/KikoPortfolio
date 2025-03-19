@@ -112,7 +112,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Crypto Analytics',
       description: 'Site made purely for the purpose of learning react.js',
-      imageUrl: '',
+      imageUrl: 'React.png',
       technologies: ['React'],
       link: 'https://github.com/KristianPejic/CryptoAnalytics',
     },
