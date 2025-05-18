@@ -12,6 +12,7 @@ import { BlogPostsComponent } from './components/blog-posts/blog-posts.component
 import { FooterComponent } from './components/footer/footer.component';
 import { CertificatesComponent } from './components/certificates/certificates.component';
 import { EducationComponent } from './components/education/education.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [

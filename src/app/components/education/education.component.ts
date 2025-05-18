@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-education',
   templateUrl: './education.component.html',
 })

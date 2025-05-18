@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-certificates',
   templateUrl: './certificates.component.html',
   styleUrls: ['./certificates.component.css'],

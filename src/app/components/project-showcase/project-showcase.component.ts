@@ -10,6 +10,7 @@ interface Project {
 }
 
 @Component({
+  standalone: false,
   selector: 'app-project-showcase',
   templateUrl: './project-showcase.component.html',
   styleUrls: ['./project-showcase.component.css'],
