@@ -59,7 +59,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'TravelPlanner',
       description:
         'TravelPlanner is a easy to use android application for travelling and planning your trips,you pick your desire location and the application will do the rest.',
-      imageUrl: 'TravelPlanner.png',
+      imageUrl: 'TravelPlannerApp.png',
       technologies: ['Java'],
       link: 'https://github.com/KristianPejic/TravelMate',
     },
