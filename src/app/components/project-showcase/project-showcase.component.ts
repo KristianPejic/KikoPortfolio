@@ -56,6 +56,14 @@ export class ProjectShowcaseComponent implements OnInit {
       liveLink: 'http://pzi132024.studenti.sum.ba/',
     },
     {
+      title: 'TravelPlanner',
+      description:
+        'TravelPlanner is a easy to use android application for travelling and planning your trips,you pick your desire location and the application will do the rest.',
+      imageUrl: 'TravelPlanner.png',
+      technologies: ['Java'],
+      link: 'https://github.com/KristianPejic/TravelMate',
+    },
+    {
       title: 'Job Application',
       description: 'backend made for job applications',
       imageUrl: 'JobApp.png',
