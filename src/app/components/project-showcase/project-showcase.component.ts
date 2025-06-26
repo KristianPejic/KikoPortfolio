@@ -87,6 +87,14 @@ export class ProjectShowcaseComponent implements OnInit {
       link: 'https://github.com/KristianPejic/Global-Soft-To-Do-List',
     },
     {
+      title: 'FastApi App',
+      description:
+        'FastApi application for products and users managment with swagger for ui.',
+      imageUrl: 'FastApi.png',
+      technologies: ['Python'],
+      link: 'https://github.com/KristianPejic/FastApiProject',
+    },
+    {
       title: 'Blog App',
       description:
         'Blog appliciation with login/register,hashtags creation,post creation,like system etc.',
