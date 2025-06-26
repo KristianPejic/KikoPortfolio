@@ -71,6 +71,14 @@ export class ProjectShowcaseComponent implements OnInit {
       link: 'https://github.com/KristianPejic/JobApplication',
     },
     {
+      title: 'Learning Analytics',
+      description:
+        'Learning Analytics is a web application that analyzes the exam performance of students dataset, with ML and DL algoritms and predictions.',
+      imageUrl: 'AnalyticsLearning.png',
+      technologies: ['Python', 'Angular'],
+      link: 'https://github.com/KristianPejic/StudentsPerformanceAnalytics',
+    },
+    {
       title: 'Global-Soft To-do list',
       description:
         'To-do list,fullstack app , made while at practic work at Global-Soft.',
