@@ -1,10 +1,18 @@
-<section index="#about" class="bg-black text-white py-16 px-8 font-montserrat">
+<section
+  id="about"
+  appScrollReveal
+  class="bg-black text-white py-16 px-8 font-montserrat"
+>
   <div class="max-w-4xl mx-auto border border-gray-800 rounded-lg p-8">
     <h1 class="text-3xl font-bold mb-2">Kristian Pejić</h1>
 
-    <div class="flex items-center text-gray-400 mb-6">
+    <div class="flex items-center text-gray-400 mb-6 flex-wrap">
       <i class="fas fa-map-marker-alt mr-2"></i>
-      <p>Grude, Bosnia and Herzegovina</p>
+      <p>{{ lang.t("location") }}</p>
+
+      <span class="mx-3">·</span>
+      <i class="fas fa-flag mr-2"></i>
+      <p>{{ lang.t("nationality") }}</p>
 
       <div class="ml-auto flex space-x-4">
         <a href="mailto:kristian.pejich@gmail.com" class="hover:text-white">
@@ -17,21 +25,9 @@
         >
           <i class="fab fa-github text-xl"></i>
         </a>
-        <a
-          href="https://instagram.com/yourusername"
-          target="_blank"
-          class="hover:text-white"
-        >
-          <i class="fab fa-instagram text-xl"></i>
-        </a>
       </div>
     </div>
 
-    <p class="text-lg">
-      I'm forging my way to become a Full-Stack Web Developer,with 4 years of
-      experience, specializing in creating websites and web applications.
-      Currently, I'm expanding my expertise in Data Science, working towards
-      becoming a Data Science Engineer.
-    </p>
+    <p class="text-lg">{{ lang.t("heroBio") }}</p>
   </div>
 </section>

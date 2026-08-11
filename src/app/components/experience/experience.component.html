@@ -1,6 +1,8 @@
-<section class="bg-black text-white py-16 px-8 font-montserrat">
+<section appScrollReveal class="bg-black text-white py-16 px-8 font-montserrat">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-16 text-center">Experience</h2>
+    <h2 class="text-3xl font-bold mb-16 text-center">
+      {{ lang.t("experience") }}
+    </h2>
 
     <div class="timeline relative">
       <div
@@ -36,9 +38,11 @@
 
         <div class="font-bold text-xl mb-1">{{ exp.position }}</div>
 
-        <div class="text-gray-400 text-sm mb-3">{{ exp.period }}</div>
+        <div class="text-gray-400 text-sm mb-3">
+          {{ exp.period[lang.current] }}
+        </div>
 
-        <p class="text-gray-300">{{ exp.description }}</p>
+        <p class="text-gray-300">{{ exp.description[lang.current] }}</p>
 
         <a
           *ngIf="exp.company === 'OpenSource'"
@@ -48,6 +52,15 @@
           github.com/KristianPejic
         </a>
       </div>
+    </div>
+
+    <div
+      class="mt-4 text-center border border-gray-800 rounded-lg py-8 px-6 max-w-md mx-auto"
+    >
+      <div class="text-5xl font-bold text-cyan-500 mb-2">
+        {{ daysOfExperience.toLocaleString() }}
+      </div>
+      <p class="text-gray-400">{{ lang.t("daysOfExperience") }}</p>
     </div>
   </div>
 </section>

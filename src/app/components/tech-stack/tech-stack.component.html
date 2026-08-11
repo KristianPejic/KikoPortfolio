@@ -1,10 +1,10 @@
-<section class="bg-black text-white py-16 px-8 font-montserrat">
+<section appScrollReveal class="bg-black text-white py-16 px-8 font-montserrat">
   <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-12">What I work with</h2>
+    <h2 class="text-3xl font-bold mb-12">{{ lang.t("whatIWorkWith") }}</h2>
 
-    <div class="tech-slider-container">
+    <div class="tech-slider-container mb-8">
       <div class="tech-slider">
-        <ng-container *ngFor="let tech of technologies">
+        <ng-container *ngFor="let tech of technologiesRow1">
           <div
             class="tech-item flex flex-col items-center mx-6 min-w-max cursor-pointer"
           >
@@ -15,7 +15,33 @@
           </div>
         </ng-container>
 
-        <ng-container *ngFor="let tech of technologies">
+        <ng-container *ngFor="let tech of technologiesRow1">
+          <div
+            class="tech-item flex flex-col items-center mx-6 min-w-max cursor-pointer"
+          >
+            <div class="tech-icon bg-gray-800 rounded-full p-4 mb-2">
+              <i [class]="tech.icon + ' text-2xl'"></i>
+            </div>
+            <span class="text-sm">{{ tech.name }}</span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="tech-slider-container">
+      <div class="tech-slider tech-slider-reverse">
+        <ng-container *ngFor="let tech of technologiesRow2">
+          <div
+            class="tech-item flex flex-col items-center mx-6 min-w-max cursor-pointer"
+          >
+            <div class="tech-icon bg-gray-800 rounded-full p-4 mb-2">
+              <i [class]="tech.icon + ' text-2xl'"></i>
+            </div>
+            <span class="text-sm">{{ tech.name }}</span>
+          </div>
+        </ng-container>
+
+        <ng-container *ngFor="let tech of technologiesRow2">
           <div
             class="tech-item flex flex-col items-center mx-6 min-w-max cursor-pointer"
           >

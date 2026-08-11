@@ -8,9 +8,8 @@ import { LanguageService } from '../../services/language.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  currentLanguage: 'en' | 'hr' = 'en';
   isMenuOpen = false;
-  constructor(private languageService: LanguageService) {}
+  constructor(public lang: LanguageService) {}
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -21,7 +20,6 @@ export class NavbarComponent {
   }
 
   toggleLanguage() {
-    this.currentLanguage = this.currentLanguage === 'en' ? 'hr' : 'en';
-    this.languageService.setLanguage(this.currentLanguage);
+    this.lang.setLanguage(this.lang.current === 'en' ? 'hr' : 'en');
   }
 }

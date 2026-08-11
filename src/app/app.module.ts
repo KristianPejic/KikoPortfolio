@@ -12,6 +12,7 @@ import { BlogPostsComponent } from './components/blog-posts/blog-posts.component
 import { FooterComponent } from './components/footer/footer.component';
 import { CertificatesComponent } from './components/certificates/certificates.component';
 import { EducationComponent } from './components/education/education.component';
+import { ScrollRevealDirective } from './directives/scroll-reveal.directive';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     CertificatesComponent,
     EducationComponent,
+    ScrollRevealDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

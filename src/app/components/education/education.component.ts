@@ -1,4 +1,11 @@
-import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
+import { LanguageService, Language } from '../../services/language.service';
+
+interface EducationItem {
+  institution: Record<Language, string>;
+  place: Record<Language, string>;
+  period: string;
+}
 
 @Component({
   standalone: false,
@@ -6,16 +13,40 @@ import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
   templateUrl: './education.component.html',
 })
 export class EducationComponent {
-  educationItems = [
+  constructor(public lang: LanguageService) {}
+
+  educationItems: EducationItem[] = [
     {
-      institution: 'Bachelor of Computer Science',
-      place:
-        'Faculty of Natural Sciences, Mathematics, and Educational Sciences, University of Mostar',
+      institution: {
+        en: 'Master of Computer Science',
+        hr: 'Magistar računarstva',
+      },
+      place: {
+        en: 'Faculty of Natural Sciences, Mathematics, and Educational Sciences, University of Mostar',
+        hr: 'Fakultet prirodoslovno-matematičkih i odgojnih znanosti, Sveučilište u Mostaru',
+      },
+      period: '2024 - 2026',
+    },
+    {
+      institution: {
+        en: 'Bachelor of Computer Science',
+        hr: 'Prvostupnik računarstva',
+      },
+      place: {
+        en: 'Faculty of Natural Sciences, Mathematics, and Educational Sciences, University of Mostar',
+        hr: 'Fakultet prirodoslovno-matematičkih i odgojnih znanosti, Sveučilište u Mostaru',
+      },
       period: '2021 - 2024',
     },
     {
-      institution: 'Gymnasium, Secondary School Antun Branko Šimić',
-      place: 'Dr. Franje Tuđmana 14, Grude (BiH)',
+      institution: {
+        en: 'Gymnasium, Secondary School Antun Branko Šimić',
+        hr: 'Gimnazija, Srednja škola Antuna Branka Šimića',
+      },
+      place: {
+        en: 'Dr. Franje Tuđmana 14, Grude (BiH)',
+        hr: 'Dr. Franje Tuđmana 14, Grude (BiH)',
+      },
       period: '2017 - 2021',
     },
   ];

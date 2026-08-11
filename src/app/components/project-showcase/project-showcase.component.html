@@ -1,6 +1,37 @@
-<section id="my-work" class="bg-black text-white py-16 px-8 font-sans">
+<section
+  id="my-work"
+  appScrollReveal
+  class="bg-black text-white py-16 px-8 font-sans"
+>
   <div class="max-w-6xl mx-auto">
-    <h1 class="text-5xl font-bold mb-12">My projects</h1>
+    <h1 class="text-5xl font-bold mb-12">{{ lang.t("myProjects") }}</h1>
+
+    <div class="flex flex-wrap gap-2 mb-10">
+      <button
+        (click)="setFilter(null)"
+        [ngClass]="
+          selectedTech === null
+            ? 'bg-cyan-600 text-white'
+            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+        "
+        class="px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200"
+      >
+        {{ lang.t("all") }}
+      </button>
+      <button
+        *ngFor="let tech of allTechnologies"
+        (click)="setFilter(tech)"
+        [ngClass]="
+          selectedTech === tech
+            ? 'bg-cyan-600 text-white'
+            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+        "
+        class="px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200"
+      >
+        <i [class]="getIcon(tech) + ' mr-1'"></i>
+        {{ tech }}
+      </button>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
@@ -47,7 +78,7 @@
               class="inline-flex items-center px-4 py-2 rounded bg-cyan-600 hover:bg-cyan-700 text-white font-medium"
               (click)="$event.stopPropagation()"
             >
-              View Source
+              {{ lang.t("viewSource") }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-4 w-4 ml-2"
@@ -71,7 +102,7 @@
               class="inline-flex items-center px-4 py-2 rounded bg-green-600 hover:bg-green-700 text-white font-medium"
               (click)="$event.stopPropagation()"
             >
-              Live Demo
+              {{ lang.t("liveDemo") }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-4 w-4 ml-2"
@@ -239,7 +270,7 @@
             target="_blank"
             class="inline-flex items-center px-6 py-3 rounded bg-cyan-600 hover:bg-cyan-700 text-white font-medium transition-colors duration-200"
           >
-            View Source
+            {{ lang.t("viewSource") }}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 ml-2"
@@ -262,7 +293,7 @@
             target="_blank"
             class="inline-flex items-center px-6 py-3 rounded bg-green-600 hover:bg-green-700 text-white font-medium transition-colors duration-200"
           >
-            Live Demo
+            {{ lang.t("liveDemo") }}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 ml-2"

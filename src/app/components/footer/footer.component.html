@@ -1,16 +1,19 @@
 <footer
+  id="contact"
   class="bg-black text-white py-8 px-8 font-montserrat border-t border-gray-800"
 >
   <div class="max-w-4xl mx-auto text-center">
     <p class="mb-2">
-      © {{ currentYear }} Kristian Pejić | Created in Bosnia and Herzegovina
+      © {{ currentYear }} Kristian Pejić | {{ lang.t("footerCreated") }}
     </p>
 
     <p class="text-gray-400">
-      Built with <i class="fas fa-heart text-cyan-600"></i> using
+      {{ lang.t("footerBuiltWith") }}
+      <i class="fas fa-heart text-cyan-600"></i>
+      {{ lang.t("footerUsing") }}
       <a href="https://angular.io" class="text-teal-400 hover:underline"
         >Angular</a
-      >. Look at some of my projects on
+      >. {{ lang.t("footerLookAt") }}
       <a
         href="https://github.com/KristianPejic"
         class="text-teal-400 hover:underline"

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 interface Project {
   title: string;
@@ -21,6 +22,7 @@ export class ProjectShowcaseComponent implements OnInit {
   projectsPerPage = 3;
   selectedProject: Project | null = null;
   showModal = false;
+  selectedTech: string | null = null;
 
   techIcons: Record<string, string> = {
     Angular: 'fab fa-angular',
@@ -43,9 +45,62 @@ export class ProjectShowcaseComponent implements OnInit {
     Python: 'fab fa-python',
     Git: 'fab fa-git-alt',
     Laravel: 'fab fa-laravel',
+    Kotlin: 'fab fa-android',
   };
 
   projects: Project[] = [
+    {
+      title: 'Finance Manager',
+      description:
+        'Personal finance management application for tracking income, expenses and budgets.',
+      imageUrl: 'FinanceManager.png',
+      technologies: ['Java'],
+      link: 'https://github.com/KristianPejic/UpravljanjeFinancijama',
+    },
+    {
+      title: 'Arena Shooter',
+      description: 'Browser based arena shooter game built with TypeScript.',
+      imageUrl: 'ArenaShooter.png',
+      technologies: ['TypeScript'],
+      link: 'https://github.com/KristianPejic/ArenaShooter',
+    },
+    {
+      title: 'Library App',
+      description:
+        'Library management application built with Vue.js, an Open API and a Node.js backend on MariaDB.',
+      imageUrl: 'LibraryApp.png',
+      technologies: ['Vue.js', 'Node.js', 'MySQL'],
+      link: 'https://github.com/KristianPejic/LibraryApp',
+    },
+    {
+      title: 'Parking Project',
+      description: 'Parking management system built with Python.',
+      imageUrl: 'ParkingProjekt.png',
+      technologies: ['Python'],
+      link: 'https://github.com/KristianPejic/ParkingProjekt',
+    },
+    {
+      title: 'SportRadar',
+      description: 'World Cup live results application built with Java.',
+      imageUrl: 'SportRadar.png',
+      technologies: ['Java'],
+      link: 'https://github.com/KristianPejic/SportRadar',
+    },
+    {
+      title: 'Ecommerce',
+      description:
+        'E-commerce store with Angular, Java Spring Boot and a MySQL database.',
+      imageUrl: 'Ecommerce.png',
+      technologies: ['Angular', 'Spring Boot', 'MySQL'],
+      link: 'https://github.com/KristianPejic/Ecommerce',
+    },
+    {
+      title: 'Volkswagen Website',
+      description: 'Volkswagen showcase website built with HTML/CSS/JS.',
+      imageUrl: 'Volkswagen.png',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://github.com/KristianPejic/Volkswagen',
+    },
     {
       title: 'Berik Barbershop',
       description:
@@ -60,7 +115,7 @@ export class ProjectShowcaseComponent implements OnInit {
       description:
         'TravelPlanner is a easy to use android application for travelling and planning your trips,you pick your desire location and the application will do the rest.',
       imageUrl: 'TravelPlannerApp.png',
-      technologies: ['Java'],
+      technologies: ['Kotlin'],
       link: 'https://github.com/KristianPejic/TravelMate',
     },
     {
@@ -98,7 +153,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Blog App',
       description:
         'Blog appliciation with login/register,hashtags creation,post creation,like system etc.',
-      imageUrl: '/assets/images/projects/project2.jpg',
+      imageUrl: 'BlogApp.png',
       technologies: ['React', 'Spring Boot', 'MySQL'],
       link: 'https://github.com/KristianPejic/BlogApp',
     },
@@ -114,7 +169,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Trello board replica',
       description:
         'Trello board replica,fullstack app , made while at practic work at Ericsson.',
-      imageUrl: '/assets/images/projects/project3.jpg',
+      imageUrl: 'TrelloBoard.png',
       technologies: ['Spring Boot', 'Angular', 'MySQL'],
       link: 'https://github.com/KristianPejic/TrelloBoard',
     },
@@ -135,13 +190,6 @@ export class ProjectShowcaseComponent implements OnInit {
       link: 'https://github.com/KristianPejic/PythonDatabase',
     },
     {
-      title: 'Crypto Analytics',
-      description: 'Site made purely for the purpose of learning react.js',
-      imageUrl: 'React.png',
-      technologies: ['React'],
-      link: 'https://github.com/KristianPejic/CryptoAnalytics',
-    },
-    {
       title: 'Super Cars Website',
       description: 'Freelance made application for someone.',
       imageUrl: 'SuperCars.png',
@@ -153,11 +201,11 @@ export class ProjectShowcaseComponent implements OnInit {
       description: 'Freelance made application for someone.',
       imageUrl: 'BMW.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/KristianPejic/SuperCars',
+      link: 'https://github.com/KristianPejic/BMW',
     },
   ];
 
-  constructor() {}
+  constructor(public lang: LanguageService) {}
 
   ngOnInit(): void {}
 
@@ -169,13 +217,36 @@ export class ProjectShowcaseComponent implements OnInit {
     return this.techIcons[tech] || 'fas fa-code';
   }
 
+  get allTechnologies(): string[] {
+    const techs = new Set<string>();
+    this.projects.forEach((p) => p.technologies.forEach((t) => techs.add(t)));
+    return Array.from(techs).sort();
+  }
+
+  get filteredProjects(): Project[] {
+    if (!this.selectedTech) {
+      return this.projects;
+    }
+    return this.projects.filter((p) =>
+      p.technologies.includes(this.selectedTech!)
+    );
+  }
+
+  setFilter(tech: string | null): void {
+    this.selectedTech = tech;
+    this.currentPage = 1;
+  }
+
   get totalPages(): number {
-    return Math.ceil(this.projects.length / this.projectsPerPage);
+    return Math.ceil(this.filteredProjects.length / this.projectsPerPage);
   }
 
   get paginatedProjects(): Project[] {
     const startIndex = (this.currentPage - 1) * this.projectsPerPage;
-    return this.projects.slice(startIndex, startIndex + this.projectsPerPage);
+    return this.filteredProjects.slice(
+      startIndex,
+      startIndex + this.projectsPerPage
+    );
   }
 
   changePage(page: number): void {

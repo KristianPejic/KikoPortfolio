@@ -1,5 +1,6 @@
 // certificates.component.ts
 import { Component } from '@angular/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   standalone: false,
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./certificates.component.css'],
 })
 export class CertificatesComponent {
+  constructor(public lang: LanguageService) {}
+
   certificates = [
     {
       date: '01.11.2021 - 27.12.2021',
@@ -44,6 +47,30 @@ export class CertificatesComponent {
       institution: 'Cultural Center King Fahd',
       location: 'Mala Tepa, Mostar, BiH',
       title: 'Advanced Computer Science - Databases 2 (SQL)',
+    },
+    {
+      date: '10.01.2022 - 19.02.2022',
+      institution: 'Cultural Center King Fahd',
+      location: 'Mala Tepa, Mostar, BiH',
+      title: 'Graphical Design 1 - Adobe Photoshop',
+    },
+    {
+      date: '02.05.2022 - 11.06.2022',
+      institution: 'Cultural Center King Fahd',
+      location: 'Mala Tepa, Mostar, BiH',
+      title: 'Graphical Design 2 - Adobe Illustrator',
+    },
+    {
+      date: '03.10.2022 - 12.11.2022',
+      institution: 'Cultural Center King Fahd',
+      location: 'Mala Tepa, Mostar, BiH',
+      title: 'Graphical Design 3 - Adobe InDesign',
+    },
+    {
+      date: '06.03.2023 - 15.04.2023',
+      institution: 'Cultural Center King Fahd',
+      location: 'Mala Tepa, Mostar, BiH',
+      title: 'Graphical Design 4 - Adobe After Effects',
     },
   ];
 }
