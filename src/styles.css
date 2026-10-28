@@ -2,20 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scroll reveal animations */
-.scroll-reveal {
+/* The whole site is dark. Painting the page black keeps white from
+   showing through sections while they are still fading in. */
+html,
+body {
+  background-color: #000;
+}
+
+/* Scroll reveal animations.
+   Only the section's direct children fade and slide in, so the section
+   itself (and its background) stays fully painted the whole time. */
+.scroll-reveal > * {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-.scroll-reveal.revealed {
+.scroll-reveal.revealed > * {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-reveal {
+  .scroll-reveal > * {
     opacity: 1;
     transform: none;
     transition: none;
