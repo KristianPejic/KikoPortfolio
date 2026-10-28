@@ -6,7 +6,7 @@ interface Project {
   description: string;
   imageUrl: string;
   technologies: string[];
-  link: string;
+  link?: string;
   liveLink?: string;
 }
 
@@ -49,6 +49,14 @@ export class ProjectShowcaseComponent implements OnInit {
   };
 
   projects: Project[] = [
+    {
+      title: 'Matica hrvatska Travnik',
+      description:
+        'News and culture website for the Matica hrvatska branch in Travnik, with news articles, a gallery, contact page and a full admin panel for managing content. Built with Angular SSR, Spring Boot and PostgreSQL, deployed with Docker and Caddy.',
+      imageUrl: 'MaticaTravnik.png',
+      technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Tailwind'],
+      liveLink: 'https://maticatravnik.com/',
+    },
     {
       title: 'Finance Manager',
       description:
