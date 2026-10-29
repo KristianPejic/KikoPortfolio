@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 
 interface Project {
@@ -53,7 +53,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Matica hrvatska Travnik',
       description:
         'News and culture website for the Matica hrvatska branch in Travnik, with news articles, a gallery, contact page and a full admin panel for managing content. Built with Angular SSR, Spring Boot and PostgreSQL, deployed with Docker and Caddy.',
-      imageUrl: 'MaticaTravnik.png',
+      imageUrl: 'MaticaTravnik.jpg',
       technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Tailwind'],
       liveLink: 'https://maticatravnik.com/',
     },
@@ -112,7 +112,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Berik Barbershop',
       description:
-        'Modern barbershop website that includes login/register,reservations,administration,shop purchases,blog system,cart system and much more.',
+        'Modern barbershop website with login/register, reservations, administration, shop purchases, a blog system, a cart system and much more.',
       imageUrl: 'BarberShop.png',
       technologies: ['Laravel', 'Tailwind', 'MySQL'],
       link: 'https://github.com/tioberik/beriks-barbershop',
@@ -121,14 +121,14 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'TravelPlanner',
       description:
-        'TravelPlanner is a easy to use android application for travelling and planning your trips,you pick your desire location and the application will do the rest.',
+        'TravelPlanner is an easy-to-use Android application for travelling and planning your trips: you pick your desired location and the application does the rest.',
       imageUrl: 'TravelPlannerApp.png',
       technologies: ['Kotlin'],
       link: 'https://github.com/KristianPejic/TravelMate',
     },
     {
       title: 'Job Application',
-      description: 'backend made for job applications',
+      description: 'Backend made for handling job applications.',
       imageUrl: 'JobApp.png',
       technologies: ['Spring Boot', 'MySQL'],
       link: 'https://github.com/KristianPejic/JobApplication',
@@ -136,7 +136,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Learning Analytics',
       description:
-        'Learning Analytics is a web application that analyzes the exam performance of students dataset, with ML and DL algoritms and predictions.',
+        'Learning Analytics is a web application that analyzes a dataset of student exam performance using ML and DL algorithms and predictions.',
       imageUrl: 'AnalyticsLearning.png',
       technologies: ['Python', 'Angular'],
       link: 'https://github.com/KristianPejic/StudentsPerformanceAnalytics',
@@ -144,15 +144,15 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Global-Soft To-do list',
       description:
-        'To-do list,fullstack app , made while at practic work at Global-Soft.',
+        'Full-stack to-do list app, made during my internship at Global-Soft.',
       imageUrl: 'GlobalSoft.png',
       technologies: ['Node.js', 'React', 'MySQL'],
       link: 'https://github.com/KristianPejic/Global-Soft-To-Do-List',
     },
     {
-      title: 'FastApi App',
+      title: 'FastAPI App',
       description:
-        'FastApi application for products and users managment with swagger for ui.',
+        'FastAPI application for product and user management, with Swagger UI for the API docs.',
       imageUrl: 'FastApi.png',
       technologies: ['Python'],
       link: 'https://github.com/KristianPejic/FastApiProject',
@@ -160,7 +160,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Blog App',
       description:
-        'Blog appliciation with login/register,hashtags creation,post creation,like system etc.',
+        'Blog application with login/register, hashtag creation, post creation, a like system and more.',
       imageUrl: 'BlogApp.png',
       technologies: ['React', 'Spring Boot', 'MySQL'],
       link: 'https://github.com/KristianPejic/BlogApp',
@@ -168,7 +168,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Netflix Replica',
       description:
-        'Angular/Spring Boot/MySQL site with login/register,jwt security,CRUD operation, auth , forgot password system etc...',
+        'Angular/Spring Boot/MySQL site with login/register, JWT security, CRUD operations, authentication, a forgot-password flow and more.',
       imageUrl: 'NetflixReplica.png',
       technologies: ['Angular', 'Spring Boot', 'MySQL'],
       link: 'https://github.com/KristianPejic/NetflixReplica',
@@ -176,7 +176,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Trello board replica',
       description:
-        'Trello board replica,fullstack app , made while at practic work at Ericsson.',
+        'Full-stack Trello board replica, made during my internship at Ericsson.',
       imageUrl: 'TrelloBoard.png',
       technologies: ['Spring Boot', 'Angular', 'MySQL'],
       link: 'https://github.com/KristianPejic/TrelloBoard',
@@ -184,7 +184,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'Pokedle',
       description:
-        'Fun,interacting pokemon guessing game.Made for sole purpose of learning angular',
+        'Fun, interactive Pokémon guessing game, made for the sole purpose of learning Angular.',
       imageUrl: 'Pokedle.png',
       technologies: ['Angular'],
       link: 'https://github.com/KristianPejic/Pokedle',
@@ -199,14 +199,14 @@ export class ProjectShowcaseComponent implements OnInit {
     },
     {
       title: 'Super Cars Website',
-      description: 'Freelance made application for someone.',
+      description: 'Freelance showcase website built for a client.',
       imageUrl: 'SuperCars.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/KristianPejic/SuperCars',
     },
     {
       title: 'BMW',
-      description: 'Freelance made application for someone.',
+      description: 'Freelance showcase website built for a client.',
       imageUrl: 'BMW.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/KristianPejic/BMW',
@@ -281,5 +281,12 @@ export class ProjectShowcaseComponent implements OnInit {
     this.showModal = false;
     this.selectedProject = null;
     document.body.classList.remove('overflow-hidden');
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.showModal) {
+      this.closeModal();
+    }
   }
 }
