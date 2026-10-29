@@ -1,27 +1,60 @@
-# KikoPortfolio
+# Kiko Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Personal portfolio website of Kristian Pejić, a full-stack web developer from Grude, Bosnia and Herzegovina.
 
-## Development server
+The site is a single-page Angular application with these sections:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Hero** – short introduction and contact links
+- **Tech stack** – animated strip of the languages, frameworks and tools I work with
+- **Experience** – timeline of internships and jobs
+- **Projects** – filterable, paginated gallery of my work with links to source code and live demos
+- **Education** and **Certificates**
 
-## Code scaffolding
+The interface is available in English and Croatian; the language toggle is in the navbar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tech stack
 
-## Build
+| Part | Technology |
+|---|---|
+| Framework | Angular 18 |
+| Styling | Tailwind CSS 3 |
+| Icons | Font Awesome |
+| Font | Montserrat (Google Fonts) |
+| Language | TypeScript |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Scroll-reveal animations use a small custom directive built on `IntersectionObserver`, with reduced-motion preferences respected.
 
-## Running unit tests
+## Running locally
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You need Node.js 18 or newer.
 
-## Running end-to-end tests
+```bash
+npm install
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The dev server runs at `http://localhost:4200/` and reloads on file changes.
 
-## Further help
+## Building
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run build
+```
+
+The production bundle is written to `dist/kiko-portfolio/`.
+
+## Project structure
+
+```
+src/
+  app/
+    components/      one folder per page section (hero, tech-stack, experience, ...)
+    directives/      scroll-reveal.directive.ts
+    services/        language.service.ts (translations and language toggle)
+  styles.css         Tailwind entry point and global styles
+public/              project screenshots, favicon and social preview image
+```
+
+## Adding a project
+
+Projects are plain data in `src/app/components/project-showcase/project-showcase.component.ts`. Add an object to the `projects` array with a title, description, technologies, an image file name from `public/`, and optionally a `link` (source code) and `liveLink` (deployed site). Keep images at 1200 px wide or less and prefer JPEG for screenshots.
