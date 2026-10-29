@@ -113,7 +113,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Berik Barbershop',
       description:
         'Modern barbershop website with login/register, reservations, administration, shop purchases, a blog system, a cart system and much more.',
-      imageUrl: 'BarberShop.png',
+      imageUrl: 'BarberShop.jpg',
       technologies: ['Laravel', 'Tailwind', 'MySQL'],
       link: 'https://github.com/tioberik/beriks-barbershop',
       liveLink: 'http://pzi132024.studenti.sum.ba/',
@@ -122,7 +122,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'TravelPlanner',
       description:
         'TravelPlanner is an easy-to-use Android application for travelling and planning your trips: you pick your desired location and the application does the rest.',
-      imageUrl: 'TravelPlannerApp.png',
+      imageUrl: 'TravelPlannerApp.jpg',
       technologies: ['Kotlin'],
       link: 'https://github.com/KristianPejic/TravelMate',
     },
@@ -145,7 +145,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Global-Soft To-do list',
       description:
         'Full-stack to-do list app, made during my internship at Global-Soft.',
-      imageUrl: 'GlobalSoft.png',
+      imageUrl: 'GlobalSoft.jpg',
       technologies: ['Node.js', 'React', 'MySQL'],
       link: 'https://github.com/KristianPejic/Global-Soft-To-Do-List',
     },
@@ -169,7 +169,7 @@ export class ProjectShowcaseComponent implements OnInit {
       title: 'Netflix Replica',
       description:
         'Angular/Spring Boot/MySQL site with login/register, JWT security, CRUD operations, authentication, a forgot-password flow and more.',
-      imageUrl: 'NetflixReplica.png',
+      imageUrl: 'NetflixReplica.jpg',
       technologies: ['Angular', 'Spring Boot', 'MySQL'],
       link: 'https://github.com/KristianPejic/NetflixReplica',
     },
@@ -207,7 +207,7 @@ export class ProjectShowcaseComponent implements OnInit {
     {
       title: 'BMW',
       description: 'Freelance showcase website built for a client.',
-      imageUrl: 'BMW.png',
+      imageUrl: 'BMW.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/KristianPejic/BMW',
     },
